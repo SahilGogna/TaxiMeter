@@ -1,4 +1,6 @@
-# TaxiMeter
+# TaxiMeter 
+
+This project has been implemented in 2 ways. One using basic functional approach of C and another object oriented approach.
 
 
 The goal of this project is to implement a taximeter. The taximeter application is going to provide the following functionalities:
