@@ -10,12 +10,9 @@
 #import "Taxi.h"
 #import "Trip.h"
 
-NS_ASSUME_NONNULL_BEGIN
-
 @interface ObjectFactory : NSObject
 @property Taxi *taxi;
 -(id)init;
 -(Taxi *)getTaxiObject;
 @end
 
-NS_ASSUME_NONNULL_END

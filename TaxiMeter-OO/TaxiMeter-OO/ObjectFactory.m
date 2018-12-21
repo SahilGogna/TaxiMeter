@@ -7,7 +7,7 @@
 //
 
 #import "ObjectFactory.h"
-
+// this factory class ensures that there is only a single object for one session
 @implementation ObjectFactory
 
 @synthesize taxi;
@@ -18,7 +18,6 @@
 }
 -(Taxi *)getTaxiObject{
     if(taxi == nil){
-        NSLog(@"Returning new taxi object!");
         taxi = [[Taxi alloc]init];
     }
     return taxi;

@@ -4,16 +4,19 @@
 #import "ObjectFactory.h"
 #import "Taxi.h"
 
+void printMenu(){
+    printf("Please enter \n\n 1 to pickup \n 2 to refule \n 3 to Get net Income \n 4 to Car's fule level \n 5 Car's Mileage \n 6 Total number of trips \n 7 to exit\n\n");
+}
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         ObjectFactory *of = [[ObjectFactory alloc]init];
         Taxi *taxi = [of getTaxiObject];
-        [taxi setFuelTankLevel:10];
+        [taxi setFuelTankLevel:10]; // setting initial fuel level
         [taxi setTripMeterCounter:0];
         int choice = 1;
         do{
-            printf("Please enter \n 1 to pickup \n 2 to refule \n 3 to Get net Income \n 4 to Car's fule level \n 5 Car's Mileage \n 6 Total number of trips \n 7 to exit");
+            printMenu();
             scanf("%d",&choice);
             switch (choice) {
                 case 1: {
@@ -32,19 +35,19 @@ int main(int argc, const char * argv[]) {
                 }break;
                     
                 case 3:
-                    printf("\nNet Income is %f \n\n", [taxi getNetIncomeGenerated]);
+                    printf("\n****Net Income is %f  ****\n\n", [taxi getNetIncomeGenerated]);
                     break;
                     
                 case 4:
-                    printf("\nCar's current Fuel level %f \n\n", [taxi getFuelTankLevel]);
+                    printf("\n****Car's current Fuel level %f  ****\n\n", [taxi getFuelTankLevel]);
                     break;
                     
                 case 5:
-                    printf("\nCar's Mileage %f \n\n", [taxi getMileage]);
+                    printf("\n****Car's Mileage %f  ****\n\n", [taxi getMileage]);
                     break;
                     
                 case 6:
-                    printf("\nTotal number of trips %d \n\n", [taxi getTripMeterCounter]);
+                    printf("\n****Total number of trips %d  ****\n\n", [taxi getTripMeterCounter]);
                     break;
                     
                 case 7:
